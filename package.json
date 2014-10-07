@@ -1,0 +1,22 @@
+{
+  "name": "MataGarudaII",
+  "version": "2.0.0",
+  "description": "Mata Garuda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fathur/mg2.0.git"
+  },
+  "keywords": [
+    "mata",
+    "garuda"
+  ],
+  "author": "Fathur Rohman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fathur/mg2.0/issues"
+  }
+}
