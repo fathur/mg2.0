@@ -37,4 +37,11 @@ Langkah selanjutnya adalah install web server apllication.
 2. Setelah terinstall masuk ke direktori aplikasi dan ketikkan perintah `composer install`.
 Semua paket yang terinstall akan masuk ke dalam direktori __vendor__
 
+### Angular JS
+
+Sistem ini menggunakan SPA (Single Page Application). Untuk pembuatanya menggukan library Javascript MVC
+[AngularJS](https://angularjs.org/)
+
 ## Issue
+
+Untuk issue masukkan disini [https://github.com/fathur/mg2.0/issues](https://github.com/fathur/mg2.0/issues)
