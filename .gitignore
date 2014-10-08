@@ -8,3 +8,7 @@ composer.lock
 .env.php
 .DS_Store
 Thumbs.db
+npm-debug.log
+.sass-cache/
+public/scripts/app.*
+public/styles/main.*

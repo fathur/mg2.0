@@ -1,8 +1,14 @@
 {
-  "name": "MataGarudaII",
+  "name": "MataGaruda",
   "version": "2.0.0",
   "description": "Mata Garuda",
-  "main": "index.js",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-uglify": "~0.6.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-sass": "~0.8.1 "
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,11 +18,16 @@
   },
   "keywords": [
     "mata",
-    "garuda"
+    "garuda",
+    "ids"
   ],
   "author": "Fathur Rohman",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fathur/mg2.0/issues"
+  },
+  "homepage": "https://github.com/fathur/mg2.0",
+  "devDependencies": {
+    "grunt": "^0.4.5"
   }
 }
