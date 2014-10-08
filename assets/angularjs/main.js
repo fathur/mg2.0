@@ -1,3 +1,1 @@
-var a = 10;
-
-a = a++;
+var mataGarudaApp = angular.module('mataGaruda', []);

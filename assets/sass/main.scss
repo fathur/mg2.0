@@ -6,9 +6,10 @@
 /**
  * Define variable for sass
  */
+$navbar-width: 200px;
 
 /**
  * Import twitter bootstrap
  */
 @import 'bootstrap/bootstrap';
-@import 'mg';
+@import 'menu';

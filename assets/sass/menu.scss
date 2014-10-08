@@ -1,0 +1,50 @@
+// Override css bootstrap navbar
+.navbar {
+	position: fixed;
+	width: $navbar-width;
+	background-color: red;
+	height: 100%;
+	border: 0px;
+
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+}
+
+.mg-menu {
+	.container-fluid {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.panel-group {
+		margin-bottom: 0px;
+
+		.panel {
+			border-radius: 0px;
+			-webkit-border-radius: 0px;
+		}
+
+		.panel + .panel {
+			margin-top: 0px;
+		}
+	}
+
+	.panel-heading {
+		padding: 0px;
+
+		a {
+			display: block;
+			padding: 10px 15px;
+			font-size: 14px;
+
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.mg-container {
+	padding-left: $navbar-width;
+}

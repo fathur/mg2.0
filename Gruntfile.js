@@ -11,6 +11,8 @@ module.exports = function(grunt) {
 		concat: {
 			js: {
 				src: [
+					'assets/angularjs/vendor/angular.js',
+					'assets/angularjs/vendor/angular-*.js',
 					'assets/angularjs/main.js',
 					'assets/angularjs/route.js',
 					'assets/angularjs/controllers/*.js',
@@ -37,12 +39,14 @@ module.exports = function(grunt) {
 					'public/scripts/app.min.js': ['<%= concat.js.src %>']
 				}
 			},
-			js: {
+			jslib: {
 				src: [
 					'assets/jquery/jquery-1.11.1.js',
+					'public/packages/bootstrap/bootstrap.js',
+					'assets/js/modernizr-2.6.2-respond-1.1.0.min.js',
 					'assets/jquery/plugin/*.js',
 				],
-				dest: 'public/scripts/main.min.js'
+				dest: 'public/scripts/lib.min.js'
 			}
 		},
 
@@ -75,7 +79,7 @@ module.exports = function(grunt) {
 			uglify: {
 				files: [
 					'<%= concat.js.src %>',
-					'<%= uglify.js.src %>',
+					'<%= uglify.jslib.src %>',
 				],
 				tasks: ['uglify']
 			},
