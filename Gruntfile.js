@@ -32,10 +32,17 @@ module.exports = function(grunt) {
 				banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
 					'<%= grunt.template.today("yyyy-mm-dd") %> */ \n',
 			},
-			js: {
+			angular: {
 				files: {
 					'public/scripts/app.min.js': ['<%= concat.js.src %>']
 				}
+			},
+			js: {
+				src: [
+					'assets/jquery/jquery-1.11.1.js',
+					'assets/jquery/plugin/*.js',
+				],
+				dest: 'public/scripts/main.min.js'
 			}
 		},
 
@@ -50,24 +57,31 @@ module.exports = function(grunt) {
 				options: {
 					style: 'compressed'
 				},
-				files: {
-					'public/styles/main.css': 'assets/sass/main.scss'
-				}
+				src: 'assets/sass/main.scss',
+				dest: 'public/styles/main.css'
 			}
 		},
 
 
 		/**
-		 * Auto run task
+		 * Autorunt task dan mendeteksi perubahan tanpa harus
+		 * mengulangi menjalankan perintah grunt
 		 */
 		watch: {
-			js: {
+			concat: {
 				files: ['<%= concat.js.src %>'],
-				tasks: ['concat:js']
+				tasks: ['concat']
 			},
-			css: {
-				files: ['<%= concat.css.src %>'],
-				tasks: ['concat:css']
+			uglify: {
+				files: [
+					'<%= concat.js.src %>',
+					'<%= uglify.js.src %>',
+				],
+				tasks: ['uglify']
+			},
+			sass: {
+				files: ['assets/sass/*.scss'],
+				tasks: ['sass']
 			}
 		}
 	});
@@ -77,6 +91,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['concat','uglify','sass']);
+	grunt.registerTask('default', ['watch']);
 	
 }

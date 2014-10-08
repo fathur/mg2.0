@@ -2,6 +2,7 @@
 /vendor
 /.vagrant
 /node_modules
+/tmp
 composer.phar
 composer.lock
 .env.*.php
