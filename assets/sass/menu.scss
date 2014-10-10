@@ -1,5 +1,10 @@
 // Override css bootstrap navbar
 .navbar {
+	
+}
+
+.mg-menu {
+
 	position: fixed;
 	width: $navbar-width;
 	background-color: red;
@@ -8,9 +13,7 @@
 
 	border-radius: 0px;
 	-webkit-border-radius: 0px;
-}
 
-.mg-menu {
 	.container-fluid {
 		padding-left: 0px;
 		padding-right: 0px;
@@ -43,8 +46,28 @@
 			}
 		}
 	}
+
+	.panel-body {
+		padding: 0px;
+	}
+
+	.nav-pills {
+
+		& > li {
+			& > a {
+				border-radius: 0px;
+				-webkit-border-radius: 0px;
+			}
+		}
+	}
 }
 
 .mg-container {
 	padding-left: $navbar-width;
+
+	.navbar {
+		margin-left: 14px;
+		border-radius: 0px;
+		-webkit-border-radius: 0px;
+	}
 }
