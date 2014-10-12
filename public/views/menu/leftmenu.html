@@ -1,0 +1,29 @@
+
+<nav class="navbar mg-menu" ng-controller="MenuCtrl">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+			Logo 
+			</div>
+		</div>
+
+		<accordion close-others="oneAtATime">
+			<accordion-group heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+				This content is straight in the template.
+			</accordion-group>
+			
+			<accordion-group heading="Dashboard">
+				<ul class="nav nav-pills nav-stacked">
+					<li class="active"><a href="#dashboard">Dashboard</a></li>
+					<li><a href="#dashboard/advanced">Advanced Dashboard</a></li>
+				</ul>
+			</accordion-group>
+			<accordion-group is-open="status.open">
+				<accordion-heading>
+				I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+				</accordion-heading>
+				This is just some content to illustrate fancy headings.
+			</accordion-group>
+		</accordion>
+	</div>
+</nav>

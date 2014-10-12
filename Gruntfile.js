@@ -11,13 +11,19 @@ module.exports = function(grunt) {
 		concat: {
 			js: {
 				src: [
-					'assets/angularjs/vendor/angular.js',
-					'assets/angularjs/vendor/angular-*.js',
+					
+					
+					// external library, harus diincluse sebelum kode buatan
+					// sendiri, agat dapat ke load
+					//'assets/js/ui-bootstrap-tpls-0.11.2.min.js',
+					'assets/angularjs/modules/*',
+
+					// Kode yang di develop semuanya disini
 					'assets/angularjs/main.js',
 					'assets/angularjs/route.js',
-					'assets/angularjs/controllers/*.js',
-					'assets/angularjs/directives/*.js',
-					'assets/angularjs/services/*.js'
+					'assets/angularjs/controllers/*',
+					'assets/angularjs/directives/*',
+					'assets/angularjs/services/*'
 				],
 				dest: 'public/scripts/app.js'
 			}
@@ -33,6 +39,7 @@ module.exports = function(grunt) {
 			options: {
 				banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
 					'<%= grunt.template.today("yyyy-mm-dd") %> */ \n',
+				mangle: false
 			},
 			angular: {
 				files: {
@@ -42,8 +49,12 @@ module.exports = function(grunt) {
 			jslib: {
 				src: [
 					'assets/jquery/jquery-1.11.1.js',
-					'public/packages/bootstrap/bootstrap.js',
+					//'public/packages/bootstrap/bootstrap.js',
 					'assets/js/modernizr-2.6.2-respond-1.1.0.min.js',
+					
+					'assets/highcharts/js/highcharts.js',
+					'assets/highcharts/js/highcharts-more.js',
+
 					'assets/jquery/plugin/*.js',
 				],
 				dest: 'public/scripts/lib.min.js'
@@ -95,6 +106,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('default', ['concat','sass','uglify','watch']);
 	
 }
