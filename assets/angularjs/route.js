@@ -36,7 +36,7 @@ mataGaruda.config(['$routeProvider','$locationProvider', function($routeProvider
 	})
 
 	.when('/setting/users', {
-		templateUrl: 'views/sensors.html'
+		templateUrl: 'views/users.html'
 	})	
 
 	.otherwise({
