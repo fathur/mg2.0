@@ -1,48 +1,99 @@
-<div class="row">
+<div class="row" ng-controller="EventsCtrl">
 	<div class="col-md-12">
-		<div class="panel-group" id="accordion">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" data-target="one">
-          Collapsible Group Item #1
-        </a>
-      </h4>
-    </div>
-    <div id="one"  class="panel-collapse collapse in">
-      <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion">
-          Collapsible Group Item #2
-        </a>
-      </h4>
-    </div>
-    <div id="two" class="panel-collapse">
-      <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#three">
-          Collapsible Group Item #3
-        </a>
-      </h4>
-    </div>
-    <div id="three" class="panel-collapse">
-      <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-</div>
+		<accordion close-others="oneAtATime">
+     
+      <accordion-group ng-repeat="event in events" heading="<% event.timestamp %>">
+        <table class="table table-condensed table-bordered">
+          <tr>
+            <td>Source IP</td>
+            <td>Destination IP</td>
+            <td>Version IP</td>
+            <td>Header Length</td>
+            <td>TOS</td>
+            <td>Datagram Length</td>
+            <td>Id</td>
+            <td>Flags</td>
+            <td>Fragment Offset</td>
+            <td>TTL</td>
+            <td>Protocol</td>
+            <td>Checksum</td>
+          </tr>
+          <tr>
+            <td><% event.sourceIp %></td>
+            <td><% event.destinationIp %></td>
+            <td><% event.versionIp %></td>
+            <td><% event.headerLength %></td>
+            <td><% event.tos %></td>
+            <td><% event.datagramLength %></td>
+            <td><% event.id %></td>
+            <td><% event.flags %></td>
+            <td><% event.fragmentOffset %></td>
+            <td><% event.ttl %></td>
+            <td><% event.protocol %></td>
+            <td><% event.checksum %></td>
+          </tr>
+        </table>
+
+        <h3>Singature</h3>
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <td>Name</td>
+                <td>Classification</td>
+                <td>Priority</td>
+                <td>Revision</td>
+            </tr>
+             <tr>
+                <td>Name</td>
+                <td>Classification</td>
+                <td>Priority</td>
+                <td>Revision</td>
+            </tr>
+        </table>
+
+        <h3>TCP Header</h3>
+         <table class="table table-condensed table-bordered">
+            <tr>
+                <td>Source Port</td>
+                <td>Destination Port</td>
+                <td>Sequence Number</td>
+                <td>ACK Number</td>
+                 <td>Offset</td>
+                <td>Reserved</td>
+                <td>Flags</td>
+                <td>Window</td>
+                 <td>Checksum</td>
+                <td>Urgent Pointer</td>
+            </tr>
+             <tr>
+                <td>Source Port</td>
+                <td>Destination Port</td>
+                <td>Sequence Number</td>
+                <td>ACK Number</td>
+                 <td>Offset</td>
+                <td>Reserved</td>
+                <td>Flags</td>
+                <td>Window</td>
+                 <td>Checksum</td>
+                <td>Urgent Pointer</td>
+            </tr>
+        </table>
+
+        <h3>Data Payload</h3>
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <td>Hex</td>
+                <td>ASCII</td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                
+            </tr>
+        </table>
+
+      </accordion-group>
+      
+    </accordion>
 	</div>
 </div>

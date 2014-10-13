@@ -1,0 +1,15 @@
+<div class="row" ng-controller="SensorCtrl">
+	<div class="col-md-12">
+		<table class="table">
+			<tr>
+				<th>Name</th>
+				<th>Interface</th>
+			</tr>
+			<tr ng-repeat="sensor in sensors">
+				<td><% sensor.name %></td>
+				<td><% sensor.interface %></td>
+			</tr>
+			
+		</table>
+	</div>
+</div>

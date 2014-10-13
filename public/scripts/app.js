@@ -51,6 +51,22 @@ mataGaruda.config(['$routeProvider','$locationProvider', function($routeProvider
 		templateUrl: 'views/event.html'
 	})
 
+	.when('/monitoring/report', {
+		templateUrl: 'views/report.html'
+	})
+
+	.when('/map', {
+		templateUrl: 'views/map.html'
+	})
+
+	.when('/sensors', {
+		templateUrl: 'views/sensors.html'
+	})
+
+	.when('/settings/users', {
+		templateUrl: 'views/sensors.html'
+	})	
+
 	.otherwise({
 		template: '404'
 	});
@@ -251,6 +267,197 @@ mataGaruda.controller('DashboardCtrl', ['$scope','$http', function($scope, $http
         }]
     };
 }]);
+mataGaruda.controller('EventsCtrl', function($scope){
+	
+	//$scope.oneAtATime = true;
+
+	$scope.items = ['Item 1', 'Item 2', 'Item 3'];
+
+
+	$scope.events = [{
+		timestamp: '2014-10-21 12:00:12',
+		sourceIp: '100.100.10.10',
+		destinationIp: '',
+		versionIp: 'IV',
+		headerLength: '',
+		tos: '',
+		datagramLength: '',
+		id: '',
+		flags: '',
+		fragmentOffset: '',
+		ttl: '',
+		protocol: '',
+		checksum:''
+	},{
+		timestamp: '2014-10-21 12:00:12',
+		sourceIp: '100.100.10.10',
+		destinationIp: '',
+		versionIp: 'IV',
+		headerLength: '',
+		tos: '',
+		datagramLength: '',
+		id: '',
+		flags: '',
+		fragmentOffset: '',
+		ttl: '',
+		protocol: '',
+		checksum:''
+	},{
+		timestamp: '2014-10-21 12:00:12',
+		sourceIp: '100.100.10.10',
+		destinationIp: '',
+		versionIp: 'IV',
+		headerLength: '',
+		tos: '',
+		datagramLength: '',
+		id: '',
+		flags: '',
+		fragmentOffset: '',
+		ttl: '',
+		protocol: '',
+		checksum:''
+	},{
+		timestamp: '2014-10-21 12:00:12',
+		sourceIp: '100.100.10.10',
+		destinationIp: '',
+		versionIp: 'IV',
+		headerLength: '',
+		tos: '',
+		datagramLength: '',
+		id: '',
+		flags: '',
+		fragmentOffset: '',
+		ttl: '',
+		protocol: '',
+		checksum:''
+	},{
+		timestamp: '2014-10-21 12:00:12',
+		sourceIp: '100.100.10.10',
+		destinationIp: '',
+		versionIp: 'IV',
+		headerLength: '',
+		tos: '',
+		datagramLength: '',
+		id: '',
+		flags: '',
+		fragmentOffset: '',
+		ttl: '',
+		protocol: '',
+		checksum:''
+	},{
+		timestamp: '2014-10-21 12:00:12',
+		sourceIp: '100.100.10.10',
+		destinationIp: '',
+		versionIp: 'IV',
+		headerLength: '',
+		tos: '',
+		datagramLength: '',
+		id: '',
+		flags: '',
+		fragmentOffset: '',
+		ttl: '',
+		protocol: '',
+		checksum:''
+	},{
+		timestamp: '2014-10-21 12:00:12',
+		sourceIp: '100.100.10.10',
+		destinationIp: '',
+		versionIp: 'IV',
+		headerLength: '',
+		tos: '',
+		datagramLength: '',
+		id: '',
+		flags: '',
+		fragmentOffset: '',
+		ttl: '',
+		protocol: '',
+		checksum:''
+	},{
+		timestamp: '2014-10-21 12:00:12',
+		sourceIp: '100.100.10.10',
+		destinationIp: '',
+		versionIp: 'IV',
+		headerLength: '',
+		tos: '',
+		datagramLength: '',
+		id: '',
+		flags: '',
+		fragmentOffset: '',
+		ttl: '',
+		protocol: '',
+		checksum:''
+	},{
+		timestamp: '2014-10-21 12:00:12',
+		sourceIp: '100.100.10.10',
+		destinationIp: '',
+		versionIp: 'IV',
+		headerLength: '',
+		tos: '',
+		datagramLength: '',
+		id: '',
+		flags: '',
+		fragmentOffset: '',
+		ttl: '',
+		protocol: '',
+		checksum:''
+	},{
+		timestamp: '2014-10-21 12:00:12',
+		sourceIp: '100.100.10.10',
+		destinationIp: '',
+		versionIp: 'IV',
+		headerLength: '',
+		tos: '',
+		datagramLength: '',
+		id: '',
+		flags: '',
+		fragmentOffset: '',
+		ttl: '',
+		protocol: '',
+		checksum:''
+	},{
+		timestamp: '2014-10-21 12:00:12',
+		sourceIp: '100.100.10.10',
+		destinationIp: '',
+		versionIp: 'IV',
+		headerLength: '',
+		tos: '',
+		datagramLength: '',
+		id: '',
+		flags: '',
+		fragmentOffset: '',
+		ttl: '',
+		protocol: '',
+		checksum:''
+	},{
+		timestamp: '2014-10-21 12:00:12',
+		sourceIp: '100.100.10.10',
+		destinationIp: '',
+		versionIp: 'IV',
+		headerLength: '',
+		tos: '',
+		datagramLength: '',
+		id: '',
+		flags: '',
+		fragmentOffset: '',
+		ttl: '',
+		protocol: '',
+		checksum:''
+	},{
+		timestamp: '2014-10-21 12:00:12',
+		sourceIp: '100.100.10.10',
+		destinationIp: '',
+		versionIp: 'IV',
+		headerLength: '',
+		tos: '',
+		datagramLength: '',
+		id: '',
+		flags: '',
+		fragmentOffset: '',
+		ttl: '',
+		protocol: '',
+		checksum:''
+	}];
+});
 mataGaruda.controller('MenuCtrl', function($scope){
 	
 	$scope.oneAtATime = true;
@@ -267,6 +474,12 @@ mataGaruda.controller('MenuCtrl', function($scope){
 		isFirstDisabled: false
 	};
 });
+mataGaruda.controller('SensorCtrl', ['$scope', function($scope){
+	$scope.sensors = [{
+		name: 'CBN',
+		interface: 'eth0:1'
+	}];
+}]);
 mataGaruda.directive('highcharts', function(){
 	// Runs during compile
 	return {

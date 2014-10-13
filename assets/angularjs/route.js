@@ -23,6 +23,22 @@ mataGaruda.config(['$routeProvider','$locationProvider', function($routeProvider
 		templateUrl: 'views/event.html'
 	})
 
+	.when('/monitoring/report', {
+		templateUrl: 'views/report.html'
+	})
+
+	.when('/map', {
+		templateUrl: 'views/map.html'
+	})
+
+	.when('/sensors', {
+		templateUrl: 'views/sensors.html'
+	})
+
+	.when('/setting/users', {
+		templateUrl: 'views/sensors.html'
+	})	
+
 	.otherwise({
 		template: '404'
 	});
