@@ -97,6 +97,36 @@ module.exports = function(grunt) {
 			sass: {
 				files: ['assets/sass/*.scss'],
 				tasks: ['sass']
+			},
+			all: {
+				files: 'index.html',
+				options: {
+					livereload: true
+				}
+			}
+		},
+
+		// grunt-express will serve the files from the folders listed in `bases`
+		// on specified `port` and `hostname`
+		express: {
+			all: {
+				options: {
+					port: 9000,
+					hostname: "0.0.0.0",
+					bases: ['D:\\www\\mg2.0\\public'], 	// Replace with the directory you want the files served from
+												// Make sure you don't use `.` or `..` in the path as Express
+												// is likely to return 403 Forbidden responses if you do
+												// http://stackoverflow.com/questions/14594121/express-res-sendfile-throwing-forbidden-error
+					livereload: true
+				}
+			}
+		},
+
+		// grunt-open will open your browser at the project's URL
+		open: {
+			all: {
+				// Gets the port from the connect configuration
+				path: 'http://localhost:<%= express.all.options.port%>'
 			}
 		}
 	});
@@ -106,6 +136,17 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['concat','sass','uglify','watch']);
+	// Load Grunt tasks declared in the package.json file
+	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
+	grunt.registerTask('default', [
+		'concat',
+		'sass',
+		'uglify',
+
+		'express',
+		'open',
+		'watch',
+	]);
 	
 }

@@ -3,8 +3,9 @@ mataGaruda.controller('DashboardCtrl', ['$scope','$http', function($scope, $http
     $scope.chartObj;
 
     var exampleConfig = {
-        chart: {
-            type: 'area'
+        
+     title: {
+        text: 'Events - Line and Pie'
      },
       "xAxis": {
         "labels": {}
@@ -55,7 +56,7 @@ mataGaruda.controller('DashboardCtrl', ['$scope','$http', function($scope, $http
             type: 'bar'
         },
         title: {
-            text: 'Historic World Population by Region'
+            text: 'Sensor Status - Bar'
         },
         subtitle: {
             text: 'Source: Wikipedia.org'
@@ -118,7 +119,7 @@ mataGaruda.controller('DashboardCtrl', ['$scope','$http', function($scope, $http
             plotShadow: false
         },
         title: {
-            text: 'Browser market shares at a specific website, 2014'
+            text: 'Main Server Status - Pie '
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'

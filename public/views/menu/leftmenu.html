@@ -8,18 +8,28 @@
 		</div>
 
 		<accordion close-others="oneAtATime">
-			<accordion-group heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-				This content is straight in the template.
-			</accordion-group>
 			
-			<accordion-group heading="Dashboard">
+			
+			<accordion-group>
+				<accordion-heading>
+					<span class="glyphicon glyphicon-dashboard"></span>&nbsp;&nbsp;
+					Dashboard
+				</accordion-heading>
 				<ul class="nav nav-pills nav-stacked">
-					<li class="active"><a href="#dashboard">Dashboard</a></li>
+					<li class="active"> 
+						<a href="#dashboard">
+							Dashboard
+						</a>
+					</li>
 					<li><a href="#dashboard/advanced">Advanced Dashboard</a></li>
 				</ul>
 			</accordion-group>
 			
-			<accordion-group heading="Monitoring">
+			<accordion-group>
+				<accordion-heading>
+					<span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;
+					Monitoring
+				</accordion-heading>
 				<ul class="nav nav-pills nav-stacked">
 					<li class="active"><a href="#monitoring/event">Events</a></li>
 					<li><a href="#monitoring/event">Categorization</a></li>
@@ -27,14 +37,22 @@
 				</ul>
 			</accordion-group>
 
-			<accordion-group heading="Map">
+			<accordion-group>
+				<accordion-heading>
+					<span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;
+					Map
+				</accordion-heading>
 				<ul class="nav nav-pills nav-stacked">
 					
 					<li><a href="#map">Map</a></li>
 				</ul>
 			</accordion-group>
 
-			<accordion-group heading="Sensors">
+			<accordion-group >
+				<accordion-heading>
+					<span class="glyphicon glyphicon-inbox"></span>&nbsp;&nbsp;
+					Sensors
+				</accordion-heading>
 				<ul class="nav nav-pills nav-stacked">
 					
 					<li><a href="#sensors">Sensors</a></li>
@@ -43,7 +61,12 @@
 				</ul>
 			</accordion-group>
 
-			<accordion-group heading="Settings">
+			<accordion-group>
+				<accordion-heading>
+					<span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;
+					Settings
+				</accordion-heading>
+
 				<ul class="nav nav-pills nav-stacked">
 					
 					<li><a href="#setting/users">Users</a></li>
@@ -52,12 +75,7 @@
 				</ul>
 			</accordion-group>
 
-			<accordion-group is-open="status.open">
-				<accordion-heading>
-				I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
-				</accordion-heading>
-				This is just some content to illustrate fancy headings.
-			</accordion-group>
+			
 		</accordion>
 	</div>
 </nav>

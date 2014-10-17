@@ -2,7 +2,10 @@
 	<div class="col-md-12">
 		<accordion close-others="oneAtATime">
      
-      <accordion-group ng-repeat="event in events" heading="<% event.timestamp %>">
+      <accordion-group ng-repeat="event in events">
+        <accordion-heading>
+                <% event.timestamp %> yaya
+                </accordion-heading>
         <table class="table table-condensed table-bordered">
           <tr>
             <td>Source IP</td>
