@@ -52,3 +52,20 @@ $green-6: #27703A;
  */
 @import 'bootstrap/bootstrap';
 @import 'menu';
+
+/**
+ * Scrollbar
+ */
+::-webkit-scrollbar {  
+   width: 7px;  
+}  
+::-webkit-scrollbar-track {  
+    
+    
+}  
+::-webkit-scrollbar-thumb {  
+    background-color: $red-1;  
+}  
+::-webkit-scrollbar-thumb:hover {  
+    background-color: $red-6;  
+}  
